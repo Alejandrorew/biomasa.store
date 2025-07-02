@@ -1,0 +1,71 @@
+name: marea_2_2
+description: "A new Flutter project."
+publish_to: 'none'
+
+# --- CORRECCIÓN CRÍTICA ---
+# Se ha incrementado el código de versión de +1 a +2.
+# Este es el cambio que Google Play Console te pidió.
+# La próxima vez que necesites subir una actualización, deberás cambiarlo a +3.
+version: 1.0.0+3
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  firebase_core: ^2.30.0
+  firebase_auth: ^4.17.8
+  cloud_firestore: ^4.15.8
+  another_flushbar: ^1.12.30
+  font_awesome_flutter: ^10.7.0
+  fl_chart: ^0.66.0
+  email_validator: ^2.1.17
+  
+  # --- SOLUCIÓN DE COMPATIBILIDAD ---
+  # Se fija la versión a una que no requiere SDK 35.
+  # Eliminamos el símbolo '^' para evitar que se actualice automáticamente
+  # a una versión que rompa la compatibilidad con teléfonos antiguos.
+  url_launcher: 6.1.14
+
+  flutter_svg: ^2.0.9
+  google_fonts: 6.2.1
+  http: ^1.0.0
+  lottie: ^2.3.2
+  intl: ^0.18.1
+  shimmer: ^3.0.0
+  
+  # --- SOLUCIÓN DE COMPATIBILIDAD ---
+  # Aunque no estaba en tu lista, el plugin path_provider es una dependencia
+  # común y uno de los que causaba problemas. Lo añadimos explícitamente
+  # y fijamos su versión a una compatible con SDK 34.
+  path_provider: 2.0.15
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.9.3
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/aquametrics_icon.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/hand_1.png
+    - assets/aquametrics_icon.png
+    - assets/mareas_animation.json
+    - assets/aguajes&mareas.png
+    - assets/animacionbotella.json
+    - assets/hand_1.json
+    - assets/shrimp_z.png
+    - assets/fondo_or.png
+    - assets/log.png
+    - assets/logo_vert.png
+    - assets/logo_cir.png
